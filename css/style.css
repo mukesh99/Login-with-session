@@ -1,0 +1,1038 @@
+/* line 13, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 25, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 28, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 31, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 39, D:/angular-authentication-example-master/scss/../shared/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #404040;
+  background: #1e3d50;
+  font-size: 12px !important;
+}
+
+/* line 7, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.body-bgcolor {
+  background-color: #dcdbd1;
+}
+
+/* line 8, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.container {
+  margin: 98px auto;
+  width: 450px;
+}
+
+/* line 12, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 13, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.normal {
+  font-weight: normal!important;
+}
+
+/* line 14, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.clear-both {
+  clear: both;
+}
+
+/* line 15, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+:-moz-placeholder {
+  color: #c9c9c9 !important;
+  font-size: 13px;
+}
+
+/* line 19, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+
+/* line 25, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.padding10 {
+  padding-top: 10px !important;
+}
+
+/* line 26, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.floatleft {
+  float: left!important;
+}
+
+/* line 27, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.floatright {
+  float: right!important;
+}
+
+/* line 29, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+input {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* line 33, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  -moz-outline-radius: 3px;
+  background: url("../images/input_bg.jpg") repeat-x scroll left bottom white;
+}
+/* line 44, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+/* line 50, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.button, .dark-blue-button {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: #c7c7c7;
+  border: 1px solid;
+  border-color: #c7c7c7;
+  border-radius: 16px;
+  cursor: hand;
+  cursor: pointer;
+  outline: 0;
+  float: left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #c7c7c7, #b3b3b3);
+  background-image: -moz-linear-gradient(top, #c7c7c7, #b3b3b3);
+  background-image: -o-linear-gradient(top, #c7c7c7, #b3b3b3);
+}
+/* line 64, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.button:active, .dark-blue-button:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* line 71, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: #40a321;
+  border: 1px solid;
+  border-color: #40a321;
+  border-radius: 16px;
+  cursor: hand;
+  cursor: pointer;
+  outline: 0;
+  float: left;
+  margin-right: 8px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #40a321, #3b981f);
+  background-image: -moz-linear-gradient(top, #40a321, #3b981f);
+  background-image: -o-linear-gradient(top, #40a321, #3b981f);
+}
+/* line 85, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* line 91, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.dark-blue-button {
+  background-color: #2f5a73 !important;
+  border: 1px solid #284d64 !important;
+  color: white !important;
+}
+
+/* line 97, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+  line-height: 34px;
+}
+
+/* line 99, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 100%;
+}
+/* line 101, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .coachtabs input[type=radio] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+/* line 106, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .coachtabs {
+  width: 100%;
+  float: none;
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+/* line 113, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .coachtabs li {
+  float: left;
+}
+/* line 116, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .coachtabs label {
+  display: block;
+  padding: 12px 20px;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  color: #546977;
+  font-size: 15px;
+  font-weight: normal;
+  background: #1b384a;
+  cursor: pointer;
+  position: relative;
+  margin-right: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 131, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .coachtabs label:hover {
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+}
+/* line 136, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main [id^=tab]:checked + label {
+  background: white;
+  color: #546977;
+  top: 0;
+}
+/* line 142, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main [id^=tab]:checked ~ [id^=tab-content] {
+  display: block;
+}
+/* line 145, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.main .tab-content {
+  z-index: 2;
+  display: none;
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+  line-height: 140%;
+  padding-top: 10px;
+  background: white;
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  -webkit-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+/* line 166, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+#footer {
+  color: #cccccc;
+  line-height: 23px;
+  clear: both;
+  text-align: right;
+  line-height: 44px;
+  width: 100%;
+  background-color: #1e3d50;
+}
+/* line 171, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+#footer a {
+  color: white;
+}
+/* line 172, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+#footer :hover {
+  text-decoration: underline;
+}
+
+/* line 177, D:/angular-authentication-example-master/scss/../shared/_common.scss */
+.cancel-image, .add-outer .sign-image {
+  background: url("../images/sprite-image.png");
+  background-position: 4px 1px;
+  background-color: #c7c7c7;
+  background-repeat: no-repeat;
+}
+
+/* line 1, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.body-bg {
+  background: url("../images/body_bg_repeat.jpg") repeat-x scroll 0 0 #dcdbd1;
+}
+
+/* line 2, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter {
+  font-size: 12px;
+  margin-left: 3%;
+  margin-right: 3%;
+  float: left;
+  width: 94%;
+}
+@media (min-width: 1025px) {
+  /* line 4, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .header {
+    background: url("../images/body_bg_glow.png") no-repeat scroll 0 0 transparent;
+    padding: 2% 2% 2% 3%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 7, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .headerteb {
+    padding: 15px 2px 0;
+  }
+}
+/* line 9, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .top {
+  height: 44px;
+}
+/* line 10, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .top h1 {
+  color: white;
+  font-size: 2em;
+  margin-top: 12px;
+}
+/* line 13, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .nav-left {
+  width: 100%;
+  float: left;
+}
+/* line 14, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .nav-right {
+  width: 28%;
+  float: right;
+}
+/* line 15, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .tabs {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 16, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 21, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .tabs li {
+  float: left;
+  margin-right: 7px;
+  padding: 15px 24px 0px;
+  background-color: #1b384a;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  height: 24px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #546977;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+/* line 30, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .tabs .active {
+  background-color: white;
+  color: #1e3d50;
+}
+/* line 35, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .user-controls {
+  background: url("../images/user_controls_bg.jpg") repeat-x scroll 0 0 transparent;
+  color: white;
+  font-size: 11px;
+  height: 39px;
+  line-height: 39px;
+  padding: 0 5px 0 5px;
+  float: right;
+  text-align: right;
+}
+/* line 41, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .user-controls ul {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+/* line 42, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .user-controls li {
+  display: inline;
+  text-decoration: none;
+  margin: 0px 2px 0px 2px;
+  cursor: hand;
+  cursor: pointer;
+}
+/* line 43, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .user-controls a {
+  color: white;
+}
+/* line 45, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .main-area .current {
+  font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 49, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .main-area {
+    width: 100%;
+    float: left;
+    margin: 0px;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 52, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .main-area {
+    width: 96%;
+    float: left;
+    margin: 0% 2% 2% 2%;
+  }
+}
+/* line 54, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area {
+  float: left;
+  font-size: 12px;
+  background-color: white;
+  width: 98%;
+  padding: 1%;
+}
+/* line 55, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec {
+  width: 16%;
+  border: 1px solid #c3c3c3;
+  float: left;
+  margin-right: 1%;
+}
+/* line 57, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 58, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group ul {
+  background-color: #e6ebee;
+  list-style: outside none none;
+  padding: 1%;
+  float: left;
+  width: 98%;
+}
+/* line 63, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group li {
+  margin-bottom: 10px;
+  background: none;
+  font-weight: normal;
+  height: 14px;
+  padding: 0 0 5px;
+  width: 94%;
+}
+/* line 64, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group a {
+  text-decoration: none;
+  color: #6c6c6c;
+  padding-top: -2px;
+}
+/* line 65, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group .icon {
+  vertical-align: middle;
+  padding-top: 8px;
+  padding-left: 5px;
+}
+/* line 66, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-group .text {
+  margin-top: -2px;
+}
+/* line 69, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .model-sec .model-text {
+  background-color: #7894a4;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 78, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec {
+  width: 82%;
+  float: left;
+}
+/* line 80, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .coachtext {
+  font-size: 24px;
+  color: #4b4b4b;
+  width: 83%;
+  float: left;
+}
+/* line 81, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .editselected {
+  float: right;
+}
+/* line 82, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .pagination-top {
+  width: 100%;
+  float: right;
+  text-align: right;
+  padding-top: 40px;
+  color: #787878;
+}
+/* line 84, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .pagination-top a {
+  background: url("../images/icons/arrow.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 15px;
+  width: 15px;
+  float: right;
+  background-position: 0px -15px;
+}
+@media only screen and (min-width: 768px), only screen and (max-width: 1023px) {
+  /* line 90, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .page-area .coach-sec .pagination-top a {
+    margin-top: 0px;
+  }
+}
+/* line 93, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .edit-selected, .homepageouter .page-area .coach-sec .pagetab .darkbackground .add-new, .homepageouter .pagetab .darkbackground .page-area .coach-sec .add-new {
+  background-image: url("../images/icons/edit-selected.png");
+  background-position: 10px 0;
+  background-repeat: no-repeat;
+  line-height: 29px;
+  padding-left: 36px;
+  color: #b3b3b3;
+  background-color: whitesmoke;
+}
+/* line 103, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .page-area .coach-sec .ctab {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+/* line 109, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter #mainView {
+  background-color: white;
+  float: left;
+  width: 100%;
+}
+/* line 114, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab ul {
+  float: left;
+  width: 100%;
+  font-size: 12px;
+}
+/* line 118, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab li {
+  float: left;
+  padding: 9px 7px;
+  margin: 5px 2px 0px 0px;
+  color: black;
+  border-radius: 5px 5px 0 0;
+  list-style: none;
+  margin-right: 5px;
+  background-color: #d1d1d1;
+  border: 1px solid #c3c3c3;
+}
+/* line 127, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab li:hover, .homepageouter .pagetab li:hover a {
+  background-color: #98adb9;
+  color: white;
+}
+/* line 131, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 138, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .active {
+  background-color: #2f5a73;
+  color: white;
+  border: 1px solid #2f5a73;
+}
+/* line 142, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .darkbackground {
+  float: left;
+  background-color: #2f5a73;
+  height: 52px;
+  width: 100%;
+  clear: both;
+}
+/* line 143, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .darkbackground .list_controls {
+  background-color: #2f5a73;
+  padding: 10px;
+}
+/* line 147, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .darkbackground .list_controls .search {
+  float: left;
+  margin-top: -7px;
+}
+/* line 148, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .darkbackground .list_controls .search-image {
+  background-image: url("../images/sprite-image.png");
+  background-position: -2px -88px;
+  width: 6px;
+  margin-left: -9px;
+  pointer: cursor;
+  pointer: hand;
+}
+/* line 152, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .darkbackground .add-new {
+  background-image: url("../images/sprite-image.png") !important;
+  background-position: 6px -25px !important;
+}
+/* line 155, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .name-header {
+  background-color: #cccccc;
+  width: 100%;
+  float: left;
+}
+/* line 156, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .name {
+  float: left;
+  width: 38%;
+  background-color: #cccccc;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  padding: 1%;
+  line-height: 19px;
+}
+/* line 157, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .status {
+  float: left;
+  width: 38%;
+  background-color: #cccccc;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  text-align: center;
+  padding: 1%;
+  line-height: 19px;
+}
+/* line 158, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .checkbox-area {
+  float: left;
+  width: 17%;
+  background-color: #cccccc;
+  border-bottom: 1px solid #afafaf;
+  text-align: center;
+  padding: 1%;
+  line-height: 12px;
+}
+/* line 161, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .sub-header-odd {
+  background-color: #ededed;
+  width: 100%;
+  float: left;
+}
+/* line 162, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .name-sub-odd {
+  float: left;
+  font-weight: bold;
+  width: 38%;
+  background-color: #ededed;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 163, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .status-sub-odd {
+  float: left;
+  width: 38%;
+  background-color: #ededed;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  text-align: center;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 164, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .checkbox-area-odd {
+  float: left;
+  width: 17%;
+  background-color: #ededed;
+  border-bottom: 1px solid #afafaf;
+  text-align: center;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 166, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .sub-header-even {
+  background-color: #ededed;
+  width: 100%;
+  float: left;
+}
+/* line 167, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .name-sub-even {
+  float: left;
+  font-weight: bold;
+  width: 38%;
+  background-color: white;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 168, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .status-sub-even {
+  float: left;
+  width: 38%;
+  background-color: white;
+  border-bottom: 1px solid #afafaf;
+  border-right: 1px solid #afafaf;
+  text-align: center;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 169, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .checkbox-area-even {
+  float: left;
+  width: 17%;
+  background-color: white;
+  border-bottom: 1px solid #afafaf;
+  text-align: center;
+  line-height: 24px;
+  padding: 1%;
+}
+/* line 171, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .icon {
+  background-image: url("../images/icons/edit.png");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  float: right;
+  width: 22px;
+  cursor: hand;
+  cursor: pointer;
+}
+/* line 176, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .delete-icon {
+  background-image: url("../images/icons/trash.png");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  float: right;
+  width: 22px;
+  cursor: hand;
+  cursor: pointer;
+}
+/* line 180, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .paging_limit {
+  color: #787878;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 24px 9px;
+  float: left;
+}
+/* line 184, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .paging_limit a {
+  color: #787878;
+}
+/* line 185, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .paging_limit a:hover {
+  text-decoration: underline;
+  color: #2f5a73;
+}
+/* line 187, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .paging {
+  margin: 25px 5px;
+}
+/* line 189, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+.homepageouter .pagetab .paging a {
+  background: url("../images/icons/arrow.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 15px;
+  margin-left: 5px;
+  width: 15px;
+  float: right;
+  background-position: 0px -15px;
+}
+@media only screen and (min-width: 768px), only screen and (max-width: 1023px) {
+  /* line 195, D:/angular-authentication-example-master/scss/../shared/_admin-homepage.scss */
+  .homepageouter .pagetab .paging a {
+    margin-top: 0px;
+  }
+}
+
+/* line 1, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-header {
+  width: 100%;
+  float: left;
+  line-height: 26px;
+  margin-top: 20px;
+  background-color: #1e3d50;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* line 3, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.form-error-massage {
+  width: 99%;
+  background-color: #fcf6c3;
+  border: 1px solid #ded8ac;
+  color: #863e1e;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/* line 4, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.form-error-massage p {
+  font-weight: normal;
+}
+/* line 5, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.form-error-massage .title {
+  background: url("../images/sprite-image.png") no-repeat scroll 0px -153px transparent;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 35px;
+}
+
+/* line 11, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer {
+  width: 98%;
+  border: 1px solid #c3c3c3;
+  background-color: #ededed;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1%;
+  float: left;
+  margin-top: -2px;
+}
+/* line 12, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .add-user-text {
+  color: #4d4d4d;
+  float: left;
+  padding: 1% 1% 0% 1%;
+  font-weight: bold;
+  width: 98%;
+}
+/* line 13, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .add-uinput {
+  float: left;
+  width: 100%;
+}
+/* line 14, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .add-user-input {
+  width: 96%;
+  color: #333333;
+  background: url("../images/input_bg.jpg") repeat-x scroll 0 0 transparent;
+  clear: both;
+}
+/* line 15, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .add-user-input-dob {
+  width: 50%;
+  color: #333333;
+  background: url("../images/input_bg.jpg") repeat-x scroll 0 0 transparent;
+  clear: both;
+}
+/* line 16, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .add-checkbox {
+  padding-top: 4px;
+  float: left;
+  padding-bottom: 8px;
+}
+/* line 17, D:/angular-authentication-example-master/scss/../shared/_add-user.scss */
+.add-outer .sign-image {
+  background-position: 0px -118px !important;
+  background-color: #40a321;
+}
+
+/* line 2, D:/angular-authentication-example-master/scss/../shared/_edit-user.scss */
+.edit-user h3 {
+  float: left;
+  font-size: 21px;
+  color: white;
+  magrin-left: 10px;
+}
+/* line 3, D:/angular-authentication-example-master/scss/../shared/_edit-user.scss */
+.edit-user .pgap {
+  padding-top: 8px;
+}
+/* line 4, D:/angular-authentication-example-master/scss/../shared/_edit-user.scss */
+.edit-user h4 {
+  float: left;
+  font-size: 14px;
+  color: #2f5a73;
+  font-weight: bold;
+}
+
+/* line 1, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 5px 30px #999;
+  float: left;
+}
+/* line 10, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+}
+/* line 17, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login h1 {
+  margin: -27px -20px 21px;
+  line-height: 64px;
+  font-size: 21px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  padding-left: 19px;
+  background: #2f5a73;
+  border-radius: 8px 8px 0 0;
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+/* line 29, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login h2 {
+  font-weight: bold;
+  font-size: 14px;
+}
+/* line 31, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login p {
+  margin: 5px -6px 0;
+}
+/* line 32, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login p:first-child {
+  margin-top: 0;
+}
+/* line 34, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login input[type=text], .login input[type=password] {
+  width: 93%;
+}
+/* line 36, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login p.remember_me {
+  float: left;
+  line-height: 31px;
+}
+/* line 39, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+/* line 46, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login .rem_me {
+  font-size: 13px;
+  color: #777777;
+  cursor: pointer;
+  font-weight: normal;
+}
+/* line 51, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  padding-left: 7px;
+  font-size: 12px;
+}
+/* line 54, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login p.submit {
+  text-align: right;
+}
+/* line 56, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login .fpassword {
+  font-weight: bold;
+  font-size: 14px;
+  color: #2f5a73;
+}
+/* line 58, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login .fpassword a {
+  text-decoration: underline;
+  color: #2f5a73;
+}
+/* line 60, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login .fptext {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+/* line 61, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login .submit {
+  float: right;
+  padding-top: 10px;
+}
+
+/* line 65, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #40a321;
+}
+/* line 72, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login-help a {
+  color: #cce7fa;
+  text-decoration: none;
+}
+/* line 76, D:/angular-authentication-example-master/scss/../shared/_login.scss */
+.login-help a:hover {
+  text-decoration: underline;
+}

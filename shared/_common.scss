@@ -1,0 +1,177 @@
+body {
+  font-family: $body-font;
+  color:$text-color;
+  background: $tab-active-color;
+  font-size:$font-size12!important;
+}
+.body-bgcolor{background-color:$background-color;}
+.container {
+  margin: 98px auto;
+  width: 450px;
+}
+.bold{font-weight:bold;}
+.normal{font-weight:normal!important;}
+.clear-both{clear:both;}
+:-moz-placeholder {
+  color: #c9c9c9 !important;
+  font-size: 13px;
+}
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+//padding part start here
+
+.padding10{padding-top:$top*5!important;}
+.floatleft{float:left!important;}
+.floatright{float:right!important;}
+// Input part start here
+input {
+  font-family: $body-font;
+  font-size:$font-size14;
+}
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  height: 34px;
+  color: $text-color;
+  background: $white;
+  border: 1px solid;
+  border-color: $input-border-top $input-border-bottom $input-border-right;
+  border-radius: 2px;
+  -moz-outline-radius: 3px; 
+  background: url('../images/input_bg.jpg') repeat-x scroll left bottom #FFF;
+  &:focus {
+    border-color:$input-border1;
+    outline-color: $input-outline-color;
+    outline-offset: 0; // WebKit sets this to -1 by default
+  }
+}
+.button {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $white;
+  background: $gray-button-color;
+  border: 1px solid;
+  border-color: $gray-button-color;
+  border-radius: 16px; cursor:hand; cursor:pointer;
+  outline: 0; float:left;
+  @include box-sizing(content-box); // Firefox sets this to border-box by default
+  @include linear-gradient(top, $gray-button-color, $dark-gray);
+
+  &:active {
+    background: #cde5ef;
+    border-color: #9eb9c2 #b3c0c8 #b4ccce;
+    @include box-shadow(inset 0 0 3px rgba(black, .2));
+  }
+}
+
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $white;
+  background: $dark-green;
+  border: 1px solid;
+  border-color: $dark-green;
+  border-radius: 16px; cursor:hand; cursor:pointer;
+  outline: 0; float:left; margin-right:8px;
+  @include box-sizing(content-box); // Firefox sets this to border-box by default
+  @include linear-gradient(top, #40A321, #3B981F);
+
+  &:active {
+    background: #cde5ef;
+    border-color: #9eb9c2 #b3c0c8 #b4ccce;
+    @include box-shadow(inset 0 0 3px rgba(black, .2));
+  }
+}
+.dark-blue-button{
+@extend .button;
+background-color:$h1-background-color!important; border:1px solid $tab-button-bordercolor!important; color:$white!important;
+}
+
+.lt-ie9 {
+  input[type=text], input[type=password] { line-height: 34px; }
+}
+.main{
+		margin:0px; padding:0px; float:left; width:100%;
+			.coachtabs input[type=radio] {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+			.coachtabs {
+			  width: 100%;
+			  float: none;
+			  list-style: none;
+			  position: relative;
+			  padding: 0;
+			}
+			.coachtabs li{
+			  float: left;
+			}
+			.coachtabs label {
+				display: block;
+				padding: 12px 20px;
+				@include border-radius(5px 5px 0 0);
+				color: $tab-text-color;
+				font-size: 15px;
+				font-weight: normal;
+				background:$tab-bsckground-color;
+				cursor: pointer;
+				position: relative; margin-right:5px;
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+			}
+			.coachtabs label:hover {
+			  background: rgba(255,255,255,0.5);
+			  top: 0;
+			}
+
+			[id^=tab]:checked + label {
+			  background: $white;
+			  color: $tab-text-color;
+			  top: 0;
+			}
+
+			[id^=tab]:checked ~ [id^=tab-content] {
+				display: block;
+			}
+			.tab-content{
+			  z-index: 2;
+			  display: none;
+			  text-align: left;
+			  width: 100%;
+			  font-size: 20px;
+			  line-height: 140%;
+			  padding-top: 10px;
+			  background:$white;
+			  padding: 15px;
+			  position: absolute;
+			  left: 0;
+			  box-sizing: border-box;
+			  -webkit-animation-duration: 0.5s;
+			  -o-animation-duration: 0.5s;
+			  -moz-animation-duration: 0.5s;
+			  animation-duration: 0.5s;
+			}
+			
+			
+	}
+#footer {
+    color: $gray-color-text;
+    line-height: 23px;clear:both;
+    text-align: right;line-height:$top*22;
+	width:100%;background-color:$tab-active-color;
+	a{color:$white;}
+	:hover{ text-decoration:underline;}
+}
+	$tablet: "(min-width: 768px) and (max-width: 1024px)";
+	
+$desktop: "(min-width: 1025px)";
+.cancel-image{background: url('../images/sprite-image.png'); background-position:4px 1px; background-color:$gray-button-color; background-repeat: no-repeat;}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Admin-Homepage</title>
+      <link rel="stylesheet" href="css/style.css">
+	  <style>
+	  a
+	  {
+	    text-decoration:none;
+		text-color:white;
+	  }
+	  a.hover
+	  {
+		  text-decoration:none;
+		  text-color:white;
+	  }
+	  </style>
+   </head>
+   <body class="body-bg">
+      <div class="homepageouter">
+         <section class="header headerteb">
+            <section class="top">
+               <h1>
+                  <cufon class="cufon cufon-canvas" alt="TriDot">
+                     <cufontext>TriDot</cufontext>
+                  </cufon>
+               </h1>
+            </section>
+         </section>
+         <section class="main-area">
+            <div class="nav-left">
+               <div class="main" ng-controller="tabController">
+                  <section class="user-controls">
+                     <ul>
+                        <li class="current">{{sessionUser}}</li>
+                        |
+                        <li ng-click="edituser()">Edit Profile</li>
+                        |
+                        <li><a href="#/login">Logout</a></p></li>
+                     </ul>
+                  </section>
+                  <ul class="coachtabs" >
+                     <li>
+                        <input type="radio" checked name="coachtabs" id="tab1">
+                        <label for="tab1" ng-click="showmanage()">Manage</label>
+                     </li>
+                     <li>
+                        <input type="radio" name="coachtabs" id="tab2">
+                        <label for="tab2" ng-click="showadmin()">Admin</label>
+                     </li>
+                     <li>
+                        <input type="radio" name="coachtabs" id="tab3">
+                        <label for="tab3" ng-click="showother()">Other</label>
+                     </li>
+                  </ul>
+                  <div ng-show="manage" class="hideByDefault clear-both">
+                     <div class="page-area">
+                        <div class="model-sec">
+                           <div class="model-text">Modules</div>
+                           <section class="model-group">
+                              <ul>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/groups.png">
+                                    </a>
+                                    <a href="#" class="text">Coaches</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/groups.png">
+                                    </a>
+                                    <a href="#" class="text">FAQs</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/menu2.png">
+                                    </a>
+                                    <a href="#" class="text">Forms</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/user.png">
+                                    </a>
+                                    <a href="#" class="text">Members</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/calendar.png">
+                                    </a>
+                                    <a href="#" class="text">Subscriptions</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/groups.png">
+                                    </a>
+                                    <a href="#" class="text">Testimonials</a>
+                                 </li>
+                              </ul>
+                           </section>
+                        </div>
+                        <div class="coach-sec">
+							<div class="" ng-show="coachpart">
+                           <div class="coachtext">Coaches</div>
+                           <div class="editselected">
+                              <input class="edit-selected button" type="button" value="Edit Selected" name="commit">
+                           </div>
+                           <div class="pagination-top">Viewing Page 1 of 2&nbsp;&nbsp;
+                              <a title="Next Page" class="next"></a>
+                           </div>
+                           <section class="pagetab">
+                              <ul ng-init="tab = 1">
+                                 <li ng-class="{active:tab===1}">
+                                    <a href ng-click="tab = 1">COACHES</a>	
+                                 </li>
+                                 <li ng-class="{active:tab===2}">
+                                    <a href ng-click="tab = 2">ARRANGE</a> 
+                                 </li>
+                                 <div ng-show="tab === 1">
+                                    <div class="darkbackground">
+                                       <div class="list_controls">
+                                          <div class="floatleft">
+                                             <input class="add-new dark-blue-button" type="button" value="Add New" name="commit" ng-click="addmanuser()">
+                                          </div>
+                                          <div class="floatright search">
+                                             <input type="text" name="keywords" value="">
+                                             <input class="search-image" type="text" name="search" value="">
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="name-header">
+                                       <div class="name">Name</div>
+                                       <div class="status">Status</div>
+                                       <div class="checkbox-area">
+                                          <input class="checkall" type="checkbox" name="checkall" value="1">
+                                       </div>
+                                    </div>
+                                    <div class="sub-header-odd">
+                                       <div class="name-sub-odd" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">Coach Abey 
+											<span ng-show="hoverEdit">
+												<span class="delete-icon">&nbsp;</span>
+												<span class="icon">&nbsp;</span>
+											  </span>
+                                       </div>
+                                       <div class="status-sub-odd">Draft</div>
+                                       <div class="checkbox-area-odd">
+                                          <input class="checkall" type="checkbox" name="checkall" value="1">
+                                       </div>
+                                    </div>
+                                    <div class="sub-header-even">
+                                       <div class="name-sub-even" >Coach Chip
+										
+                                          <span class="delete-icon">&nbsp;</span>
+                                          <span class="icon">&nbsp;</span>
+										 
+                                       </div>
+                                       <div class="status-sub-even">Published</div>
+                                       <div class="checkbox-area-even">
+                                          <input class="checkall" type="checkbox" name="checkall" value="1">
+                                       </div>
+                                    </div>
+                                    
+                                    
+                                   
+                                    
+                                    <div class="paging_limit"> <strong>View Per Page:</strong>&nbsp;&nbsp;
+                                       <strong>20</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">50</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">100</a>        
+                                    </div>
+                                    <div class="paging floatright">
+                                       Viewing Page 1 of 2
+                                       <a class="next" title="Next Page"></a>
+                                    </div>
+                                 </div>
+                                 <div ng-show="tab === 2">I drink pulpy orange juice, mango milk shake...</div>
+                              </ul>
+                           </section>
+                        </div>
+						
+						<div class="" ng-show="mancoach">
+							<div class="coachtext">Add Coach</div>
+                           <div class="editselected">
+                              <input class="edit-selected button" type="button" value="Return to List" name="commit">
+                           </div>
+						   <form name="form" ng-app>
+						    <div class="clear-both padding10"></div>
+								   
+									   <div class="form-error-massage" ng-show="submitted && form.$error.required">
+											<div class="title">ERROR: Unable to Save Changes
+											<p>Please correct the following and try again.</p>
+											<ul>
+												<li><span class="help-inline" ng-show="submitted && form.firstname.$error.required">First Name Required</span></li>
+												<li><span class="help-inline" ng-show="submitted && form.lastname.$error.required">Last Name Required</span></li>
+											</ul>
+											</div>
+									   </div>
+								   <div class="add-outer">
+								   
+										<div class="add-user-text">*First Name:</div>
+										<div class="add-uinput"><input type="text" name="firstname"  class="add-user-input" ng-model="firstname" required /> <span  required ng-show="submitted && form.firstname.$error.required"></span></div>
+										<div class="add-user-text">*Last Name:</div>
+										<div class="add-uinput"><input type="text" name="lastname" class="add-user-input" ng-model="lastname" required /><span required ng-show="submitted && form.lastname.$error.required"></span></div>
+										<div class="add-user-text">Description:</div>
+										<div class="add-uinput"><input type="text" name="desc" class="add-user-input"></div>
+										
+										<div class="add-user-text">Keywords:</div>
+										<div class="add-uinput"><input type="text" name="keyword" class="add-user-input"></div>
+										<div class="add-user-text">Meta Title:</div>
+										<div class="add-uinput"><input type="text" name="title" class="add-user-input"></div>
+										<div class="add-user-text">Coaching Level:</div>
+										<div class="add-uinput"><input type="text" name="clevel" class="add-user-input"></div>
+										<div class="add-user-text">Date of Birth:</div>
+										<div class="add-uinput"><input type="text" name="dob" class="add-user-input-dob"></div>
+										<div class="add-user-text">Hometown:</div>
+										<div class="add-uinput"><input type="text" name="htown" class="add-user-input"></div>
+										<div class="add-user-text">Resides In:</div>
+										<div class="add-uinput"><input type="text" name="res" class="add-user-input"></div>
+										
+										<div class="add-user-text">Country:</div>
+										<div class="add-uinput"><input type="text" name="country" class="add-user-input"></div>
+										<div class="add-user-text">Age:</div>
+										<div class="add-uinput"><input type="text" name="country" class="add-user-input-dob"></div>
+										<div class="add-user-text">Family:</div>
+										<div class="add-uinput"><input type="text" name="country" class="add-user-input"></div>
+										<div class="add-user-text">Keywords:</div>
+										<div class="add-uinput"><input type="text" name="country" class="add-user-input"></div>
+										
+										<div class="add-checkbox"><input type="checkbox" name="tick"> Make this user an <span class="bold">Administrator</span></div>
+										<div class="add-user-text">*Password<span class="normal">(please enter twice)</span>:</div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										
+										
+										<div class="add-checkbox padding10 clear-both">*= required field</div>
+										
+										<div class="add-checkbox padding10 clear-both"><input type="submit" name="commit" value="&nbsp;&nbsp;&nbsp;&nbsp;save Changes" class="sign-image" ng-click="submitted=true"><input type="button" name="commit" value="&nbsp;&nbsp; &nbsp;Cancel & Exit" class="cancel-image button"></div>
+										
+								  </div>
+								  </form>
+						</div>
+						</div>
+                     </div>
+					 
+                  </div>
+                  <div ng-show="admin" class="hideByDefault clear-both">
+                     <div class="page-area">
+                        <div class="model-sec">
+                           <div class="model-text">SITES</div>
+						   <section class="model-group">
+                              <ul>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/sites.png">
+                                    </a>
+                                    <a href="#" class="text">Site Manager</a>
+                                 </li>
+								 </ul>
+							</section>
+							<div class="model-text clear-both">USERS</div>							
+                           <section class="model-group">
+                              <ul>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/user.png">
+                                    </a>
+                                    <a href="#" class="text">Users</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/permissions.png">
+                                    </a>
+                                    <a href="#" class="text">Roles</a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="icon">
+                                    <img alt="" src="images/icons/groups.png">
+                                    </a>
+                                    <a href="#" class="text">Groups</a>
+                                 </li>
+                               
+                              </ul>
+                           </section>
+                        </div>
+                        <div class="coach-sec">
+						 <div ng-show="adpart" class="hideByDefault clear-both" >
+                           <div class="coachtext">Users</div>
+                           <div class="editselected">
+                              <input class="edit-selected button" type="button" value="Edit Selected" name="commit">
+                           </div>
+						   <div class="clear-both padding10"></div> 
+                           <section class="pagetab">
+                              <div class="darkbackground">
+                                 <div class="list_controls">
+                                    <div class="floatleft">
+                                       <input class="add-new dark-blue-button" type="button" value="Add New" name="commit" ng-click="addadminuser()">
+                                    </div>
+                                    <div class="floatright search">
+                                       <input type="text" name="keywords" value="">
+                                       <input class="search-image" type="text" name="search" value="">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="name-header">
+                                 <div class="name">Name</div>
+                                 <div class="status">Status</div>
+                                 <div class="checkbox-area">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-odd">
+                                 <div class="name-sub-odd" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">Coach Abey 
+								 <span ng-show="hoverEdit">
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon" ng-click="edituser()">&nbsp;</span>
+									</span>
+                                 </div>
+                                 <div class="status-sub-odd">Draft</div>
+                                 <div class="checkbox-area-odd">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-even">
+                                 <div class="name-sub-even">Coach Chip
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon">&nbsp;</span>
+                                 </div>
+                                 <div class="status-sub-even">Published</div>
+                                 <div class="checkbox-area-even">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-odd">
+                                 <div class="name-sub-odd">Name
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon">&nbsp;</span>
+                                 </div>
+                                 <div class="status-sub-odd">Status</div>
+                                 <div class="checkbox-area-odd">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-even">
+                                 <div class="name-sub-even">Name
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon">&nbsp;</span>
+                                 </div>
+                                 <div class="status-sub-even">Published</div>
+                                 <div class="checkbox-area-even">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-odd">
+                                 <div class="name-sub-odd">Name
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon">&nbsp;</span>
+                                 </div>
+                                 <div class="status-sub-odd">Status</div>
+                                 <div class="checkbox-area-odd">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="sub-header-even">
+                                 <div class="name-sub-even">Name
+                                    <span class="delete-icon">&nbsp;</span>
+                                    <span class="icon">&nbsp;</span>
+                                 </div>
+                                 <div class="status-sub-even">Published</div>
+                                 <div class="checkbox-area-even">
+                                    <input class="checkall" type="checkbox" name="checkall" value="1">
+                                 </div>
+                              </div>
+                              <div class="paging_limit"> <strong>View Per Page:</strong>&nbsp;&nbsp;
+                                 <strong>20</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">50</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">100</a>        
+                              </div>
+                           </section>
+						   </div>
+						   <div ng-show="userpart" class="hideByDefault clear-both">
+								<div class="coachtext">Add User</div>
+								   <div class="editselected">
+									  <input class="edit-selected button" type="button" value="Return to List" name="commit">
+								   </div>
+								   <div class="clear-both padding10"></div>
+								    <form name="addform" ng-app>
+								   <div class="form-error-massage" ng-show="submitted && addform.$error.required">
+											<div class="title">ERROR: Unable to Save Changes
+											<p>Please correct the following and try again.</p>
+											<ul>
+												<li><span class="help-inline" ng-show="submitted && addform.firstname.$error.required">First Name Required</span></li>
+												<li><span class="help-inline" ng-show="submitted && addform.lastname.$error.required">Last Name Required</span></li>
+											</ul>
+											</div>
+									   </div>
+								   
+								   <div class="add-header">&nbsp;</div>
+								   <div class="add-outer">
+										<div class="add-user-text">*First Name:</div>
+										<div class="add-uinput"><input type="text" name="firstname" class="add-user-input" ng-model="firstname" required /></div>
+										<div class="add-user-text">*Last Name:</div>
+										<div class="add-uinput"><input type="text" name="lastname" class="add-user-input" ng-model="lastname" required /></div>
+										<div class="add-user-text">*E-Mail Address:</div>
+										<div class="add-uinput"><input type="text" name="email" class="add-user-input"></div>
+										
+										<div class="add-checkbox"><input type="checkbox" name="tick"> Make this user an <span class="bold">Administrator</span></div>
+										<div class="add-user-text">*Password<span class="normal">(please enter twice)</span>:</div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										
+										<div class="add-checkbox padding10"><input type="checkbox" name="tick"><span class="bold">Send password to this user by e-mail</span></div>
+										<div class="add-checkbox padding10 clear-both">*= required field</div>
+										
+										<div class="add-checkbox padding10 clear-both"><input type="submit" name="commit" value="&nbsp;&nbsp;&nbsp;&nbsp;save Changes" class="sign-image" ng-click="submitted=true"><input type="button" name="commit" value="&nbsp;&nbsp; &nbsp;Cancel & Exit" class="cancel-image button"></div>
+										
+								  </div>
+								  </form>
+						   </div>
+								   <div ng-show="editpart" class="hideByDefault clear-both">
+										 
+                           <div class="coachtext">Edit User</div>
+                           <div class="editselected">
+                              <input class="edit-selected button" type="button" value="Return to List" name="commit">
+                           </div>
+                           
+                           <section class="pagetab">
+                              <ul ng-init="tab = 1">
+                                 <li ng-class="{active:tab===1}">
+                                    <a href ng-click="tab = 1">USER</a>	
+                                 </li>
+                                 <li ng-class="{active:tab===2}">
+                                    <a href ng-click="tab = 2">PERMISSIONS</a> 
+                                 </li>
+                                 <div ng-show="tab === 1">
+                                    <div class="darkbackground">
+                                       <div class="list_controls">
+                                          <div class="edit-user">
+												<h3 class="pgap">Sabinaya Uprety (sabinaya)</h3>
+										  </div>
+                                          
+                                       </div>
+                                    </div>
+                                    <div class="add-outer">
+									<div class="add-user-text">User Name <span class="normal">(usernames cannot be changed) </span>:</div>
+										<div class="add-uinput"><input type="text" name="username" class="add-user-input"></div>
+										<div class="add-user-text">*First Name:</div>
+										<div class="add-uinput"><input type="text" name="firstname" class="add-user-input"></div>
+										<div class="add-user-text">*Last Name:</div>
+										<div class="add-uinput"><input type="text" name="lastname" class="add-user-input"></div>
+										<div class="add-user-text">*E-Mail Address:</div>
+										<div class="add-uinput"><input type="text" name="email" class="add-user-input"></div>
+										
+										<div class="add-checkbox"><input type="checkbox" name="tick"> Make this user an <span class="bold">Administrator</span></div>
+										<div class="add-user-text">*Password<span class="normal">(please enter twice)</span>:</div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										<div class="add-uinput"><input type="text" name="password" class="add-user-input"></div>
+										
+										<div class="add-checkbox padding10"><input type="checkbox" name="tick"><span class="bold">Send password to this user by e-mail</span></div>
+										<div class="add-checkbox padding10 clear-both">*= required field</div>
+										
+										<div class="add-checkbox padding10 clear-both"><input type="submit" name="commit" value="&nbsp;&nbsp;&nbsp;&nbsp;save Changes" class="sign-image"><input type="button" name="commit" value="&nbsp;&nbsp; &nbsp;Cancel & Exit" class="cancel-image button"></div>
+										
+								  </div>
+                                 </div>
+                                 <div ng-show="tab === 2" class="clear-both">
+									<div class="darkbackground">
+                                       <div class="list_controls">
+                                          <div class="edit-user">
+												<h3 class="pgap">Sabinaya Uprety (sabinaya)</h3>
+										  </div>
+                                          
+                                       </div>
+                                    </div>
+									<div class="edit-user add-outer">
+										<h4>This user is currently an Administrator and does not require individual permissions to be applied.</h4>
+									</div>
+								 </div>
+                              </ul>
+                           </section>
+                        
+								   </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div ng-show="other" class="hideByDefault clear-both">
+                     <div class="page-area">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"  
+                     </div>
+                  </div>
+				  
+               </div>
+            </div>
+         </section>
+      </div>
+      <section>
+         <div id="footer">
+            <strong>Need Help?</strong> Contact AM Support: <a href="mailto:support@amdesign.com">support@amdesign.com</a> | (817) 503-8870
+            <a title="Powered by AM CMS" target="_blank" href="http://amdesign.com" class="right" id="am_footer_logo"><img alt="AM Design Small Logo" src="http://tridot.com/am-admin/images/am_footer_logo.png"></a>
+            <div class="clear">
+               <!-- -->
+            </div>
+         </div>
+      </section>
+      <script src="js/lib/angular/angular.js"></script>
+      <script src="js/tab.js"></script>
+   </body>
+</html>

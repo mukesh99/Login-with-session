@@ -1,0 +1,201 @@
+.body-bg{background: url("../images/body_bg_repeat.jpg") repeat-x scroll 0 0 $background-color;}
+.homepageouter{font-size:$font-size12; margin-left:3%; margin-right:3%; float:left; width:94%; 
+		@media #{$desktop} {
+				.header{background: url("../images/body_bg_glow.png") no-repeat scroll 0 0 transparent;	padding: 2% 2% 2% 3%;}
+				}
+			@media #{$tablet} {
+			  .headerteb{padding: 15px 2px 0;}
+			}	
+			.top{height:$height*22;
+					h1{color:$white; font-size:$font-size2em; margin-top:$top*6;}
+			}
+	.main-area{ 	
+				.nav-left{width:100%; float:left;}
+				.nav-right{width:28%; float:right;}
+				.tabs{margin:0px; padding:0px;
+						ul {
+							list-style: none;
+							padding: 0;
+							margin: 0;
+						}
+						li {
+							float: left;	
+							margin-right:7px;
+							padding: 15px 24px 0px;
+							background-color: $tab-bsckground-color;
+							color: $white; cursor:hand; cursor:pointer;
+							height:$height*12; font-weight:bold; font-size:$font-size14; color:$tab-text-color;
+							@include border-radius(5px 5px 0px 0px);	
+						}
+						.active {
+							background-color:$white;
+							color:$tab-active-color;
+						}
+					}
+				.user-controls{background: url("../images/user_controls_bg.jpg") repeat-x scroll 0 0 transparent;
+								color: $white;
+								font-size: $font-size11;
+								height: 39px;
+								line-height: 39px;
+								 padding: 0 5px 0 5px; float:right;  text-align: right;
+								ul{margin:0px; padding:0px; width:100%;}
+								li{display:inline; text-decoration:none; margin:0px 2px 0px 2px; cursor:hand; cursor:pointer;}
+								a{color:$white;}
+								}
+								.current{font-weight:bold;}					
+				}
+			
+					@media #{$tablet} {
+					  .main-area{width: 100%; float:left; margin:0px;}
+					}
+					@media #{$desktop} {
+					.main-area{width: 96%; float:left; margin:0% 2% 2% 2%;}
+					}
+.page-area{float:left; font-size:$font-size12; background-color:$white; width:98%; padding:1%;
+	.model-sec{
+				width:16%; border:1px solid #c3c3c3; float:left; margin-right:1%;
+					.model-group{margin:0px; padding:0px;
+									ul{
+										background-color:$model-background-color;
+										list-style: outside none none;
+										padding:1%; float:left; width:98%;
+										}
+												li{margin-bottom: 10px; background:none; font-weight:normal; height:14px; padding: 0 0 5px; width:94%;}
+												a{text-decoration:none; color:$model-textcolor; padding-top:-2px;}
+												.icon{vertical-align: middle; padding-top:8px; padding-left:5px;}
+												.text{margin-top:-2px;}
+								}
+								
+					.model-text{ background-color:$module-color;
+											color:$white;
+											font-size:$font-size16;
+											padding: 8px 12px 6px;
+											text-transform: uppercase; font-weight:bold;					
+								}
+								
+				}
+				
+				.coach-sec{
+							width:82%; float:left;
+							.coachtext{font-size:$font-size24; color:$coach-textcolor; width:83%; float:left;}
+							.editselected{float:right;}
+							.pagination-top{
+											width:100%; float:right; text-align:right; padding-top:$top*20; color:$page-limit-color;
+												a{background: url("../images/icons/arrow.png") no-repeat scroll 0 0 transparent;
+																	display: block;
+																	height: 15px;
+																	width: 15px;float:right;background-position:0px -15px;
+																	}
+																	@include tablet{
+																		a{margin-top:0px;}
+																	}
+											}
+							.edit-selected {
+											background-image: url("../images/icons/edit-selected.png");
+											background-position: 10px 0;
+											background-repeat: no-repeat;
+											line-height: 29px;
+											padding-left:$left*18;
+											color:$dark-gray; background-color:$light-button-color;
+											
+										}
+										
+										.ctab{width:100%; clear:both; padding-top:$top*20;}
+						}
+				
+	}
+			
+			
+			#mainView {
+				background-color:$white; float:left; width:100%;
+					
+							}	
+							.pagetab{
+								ul {
+									float: left;
+									width:100%;font-size:$font-size12;
+									}
+									li {
+									float: left;
+									padding: 9px 7px;
+									margin: 5px 2px 0px 0px;
+									color: black;border-radius: 5px 5px 0 0;
+									list-style: none; margin-right:5px;
+									background-color:$tab-secback-color;
+									border:1px solid $tab-secborder-color;
+									}
+									li:hover, li:hover a {
+									background-color: $tab-secbackground-color;
+									color:$white;
+									}
+									li a {
+									text-decoration: none;
+									color:$white;
+									font-size:$font-size12; font-weight:bold;
+									
+									}
+									
+									.active {
+									background-color:$h1-background-color;
+									color:white; border:1px solid $h1-background-color;
+									}
+								.darkbackground{float:left; background-color:$h1-background-color; height:$top*26; width:100%; clear:both;
+									.list_controls {
+												background-color: $h1-background-color;
+												padding:$allsidepadding*5;
+												
+												.search{float:left; margin-top:-7px;}
+												.search-image{background-image: url("../images/sprite-image.png");
+																background-position: -2px -88px; width:6px;  margin-left:-9px; pointer:cursor; pointer:hand;}
+												
+											}
+											.add-new{@extend .edit-selected; background-image: url("../images/sprite-image.png")!important;
+									background-position: 6px -25px!important;}
+									}
+											.name-header{background-color:$gray-color-text; width:100%; float:left;}
+											.name{ float:left; width:38%; background-color:$gray-color-text; border-bottom:1px solid $col-color; border-right:1px solid $col-color;padding:1%;line-height:$line-height;}
+											.status{float:left; width:38%; background-color:$gray-color-text; border-bottom:1px solid $col-color; border-right:1px solid $col-color; text-align:center;padding:1%;line-height:$line-height;}
+											.checkbox-area{float:left; width:17%; background-color:$gray-color-text; border-bottom:1px solid $col-color; text-align:center;padding:1%;line-height:$top*6;}
+											
+													
+											.sub-header-odd{background-color:$col-gray-color; width:100%; float:left; }
+											.name-sub-odd{float:left; font-weight:bold; width:38%; background-color:$col-gray-color; border-bottom:1px solid $col-color; border-right:1px solid $col-color; line-height:$top*12;padding:1%;}
+											.status-sub-odd{float:left; width:38%; background-color:$col-gray-color; border-bottom:1px solid $col-color; border-right:1px solid $col-color; text-align:center;line-height:$top*12;padding:1%;}
+											.checkbox-area-odd{float:left; width:17%; background-color:$col-gray-color; border-bottom:1px solid $col-color; text-align:center;line-height:$top*12;padding:1%;}
+											
+											.sub-header-even{background-color:$col-gray-color; width:100%; float:left;}
+											.name-sub-even{ float:left;font-weight:bold; width:38%; background-color:$white; border-bottom:1px solid $col-color; border-right:1px solid $col-color; line-height:$top*12;padding:1%;}
+											.status-sub-even{float:left; width:38%; background-color:$white; border-bottom:1px solid $col-color; border-right:1px solid $col-color; text-align:center;line-height:$top*12;padding:1%;}
+											.checkbox-area-even{float:left; width:17%; background-color:$white; border-bottom:1px solid $col-color; text-align:center;line-height:$top*12;padding:1%;}
+											
+								.icon{background-image: url("../images/icons/edit.png");
+															background-position: 0 center;
+															background-repeat: no-repeat;
+															float: right;
+															width: 22px; cursor:hand; cursor:pointer;}
+								.delete-icon{background-image: url("../images/icons/trash.png");background-position: 0 center;background-repeat: no-repeat;
+															float: right;
+															width: 22px; cursor:hand; cursor:pointer;}
+															
+								.paging_limit{color:$page-limit-color;
+												font-size:$font-size12;
+												line-height:$top*8;
+												margin:24px 9px; float:left;
+												a{color:$page-limit-color;}
+												a:hover{text-decoration:underline; color:$h1-background-color;}
+												}
+												.paging {
+																margin:25px 5px;
+															a{background: url("../images/icons/arrow.png") no-repeat scroll 0 0 transparent;
+																		display: block;
+																		height: 15px;margin-left:5px;
+																		width: 15px;float:right;background-position:0px -15px;
+																		}
+																		@include tablet{
+																						a{margin-top:0px;}
+																							}
+															}
+												
+							}
+	
+}

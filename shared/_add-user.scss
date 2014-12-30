@@ -1,0 +1,20 @@
+.add-header{width:100%;float:left; line-height:$top*13; margin-top:$top*10; background-color:$tab-active-color; @include border-radius(5px 5px 0px 0px);}
+.form-error-massage
+{width:99%; background-color:$error-background; border: 1px solid $error-border-color; color:$error-text-color; margin-bottom:$bottom*5; padding:5px;
+ p{font-weight:normal;}
+ .title{background: url("../images/sprite-image.png") no-repeat scroll 0px -153px transparent;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 35px;}
+}
+ 
+.add-outer{width:98%; border:1px solid #c3c3c3; background-color:$col-gray-color; @include border-radius(5px);  padding:1%; float:left; margin-top:-2px;
+	.add-user-text{color:$add-user-text; float:left; padding:1% 1% 0% 1%; font-weight:bold; width:98%;}
+	.add-uinput{float:left; width:100%; }
+	.add-user-input{width:96%;color:$add-user-input-text; background: url("../images/input_bg.jpg") repeat-x scroll 0 0 transparent; clear:both;}
+	.add-user-input-dob{width:50%;color:$add-user-input-text; background: url("../images/input_bg.jpg") repeat-x scroll 0 0 transparent; clear:both;}
+	.add-checkbox{padding-top:$top*2; float:left; padding-bottom:$bottom*4;}
+	.sign-image{@extend .cancel-image; background-position:0px -118px!important; background-color:$dark-green;} 
+	
+}
+
